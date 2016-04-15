@@ -44,7 +44,10 @@ public class SftpTest {
 
         Channel channel = session.openChannel("sftp");
         channel.connect();
+        channel.disconnect();
         
+        session.disconnect();
+
 		System.out.println("sftp");
 	}
 
